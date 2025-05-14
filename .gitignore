@@ -13,9 +13,6 @@ PharoDebug.log
 # Squeak Smalltalk Debug log file
 SqueakDebug.log
 
-# Dolphin Smalltalk source file
-*.sml
-
 # Dolphin Smalltalk error file
 *.errors
 
