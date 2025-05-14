@@ -203,3 +203,39 @@ l inspect.!
 
 "18:45:26, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
 
+"19:42:04, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Libreria
+	instanceVariableNames: 'id nombre'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Libreria methodsFor!
+iniLibreriaId: unId nombre: unNombre
+	"Inicializa una libreria"
+
+	id := unId.
+	nombre := unNombre.! !
+!Libreria categoriesFor: #iniLibreriaId:nombre:!private! !
+
+Libreria removeSelector: #iniLibreriaId: ifAbsent: []!
+
+!Libreria methodsFor!
+iniLibreriaId: unId nombre: unNombre
+	"Inicializa una libreria"
+
+	id := unId.
+	nombre := unNombre.! !
+!Libreria categoriesFor: #iniLibreriaId:nombre:!private! !
+
+Object subclass: #Proveedor
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Proveedor guid: (GUID fromString: '{474A2C2D-9E38-4C13-A536-9111051A264B}')!
+Proveedor comment: ''!
+!Proveedor categoriesForClass!Kernel-Objects! !
+"19:44:04, miércoles, 14 de mayo de 2025: Image saved"!
+
