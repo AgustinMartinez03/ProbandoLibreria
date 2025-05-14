@@ -1,0 +1,205 @@
+"6:58:05 PM, Wednesday, March 30, 2016: Compressed sources"!
+
+DevelopmentSessionManager installNew!
+
+SessionManager current defaultResourceLibrary loadFlags: 0.
+SessionManager current stashBootInfo!
+
+"Ensure all structures have calculated size to avoid recompilation messages later"
+ExternalStructure allSubclasses do: [:e | e byteSize]!
+
+"Mark all the booted packages as base"
+Package manager markAllPackagesAsBase!
+
+SessionManager current saveImage!
+
+"6:59:05 PM, Wednesday, March 30, 2016: Image saved"!
+
+"Remove rogue .img and unnecessary .chg files"
+File delete: (File default: SessionManager current imagePath extension: 'img').
+File delete: 'DBOOT.chg'!
+
+SessionManager current quit!
+
+"23:34:42, sábado, 18 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+"23:40:22, sábado, 18 de enero de 2025: Image saved"!
+
+"23:45:22, sábado, 18 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+"23:52:12, sábado, 18 de enero de 2025: Image saved"!
+
+"23:55:48, sábado, 18 de enero de 2025: Image saved"!
+
+"23:56:00, sábado, 18 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+"23:57:13, sábado, 18 de enero de 2025: Image saved"!
+
+"23:58:09, sábado, 18 de enero de 2025: Image saved"!
+
+"23:58:11, sábado, 18 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+3 + 4.!
+
+3 + 4.!
+
+3 + 4.!
+
+3 + 4.!
+
+3 + 4.!
+
+3 + 4.!
+
+3 + 4.!
+
+1000 factorial.!
+
+Time millisecondsToRun: [1000 factorial].!
+
+Time microsecondsToRun: [1000 factorial].!
+
+Time microsecondsToRun: [1000 factorial].!
+
+3 + 4.!
+
+3 + 4.!
+
+digitalClockProcess := [[
+	Processor sleep: 1000.
+	(DesktopView current canvas)
+		font: (Font name: 'Arial' pointSize: 36) beBold;
+		text: Time now printString at: 10@10;
+		free
+] repeat] fork.!
+
+digitalClockProcess terminate. View desktop invalidate.!
+
+(Sound fromFile: 'xxxxx.wav') woofAndWait; woofAndWait.!
+
+"00:07:25, domingo, 19 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+"00:08:59, domingo, 19 de enero de 2025: Image saved"!
+
+"00:09:05, domingo, 19 de enero de 2025: Image saved"!
+
+"00:09:06, domingo, 19 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+Processor := nil.!
+
+"00:10:12, domingo, 19 de enero de 2025: Dolphin Smalltalk Professional started"!
+
+Transcript cr; show: 'Hello World'; cr.!
+
+Transcript cr; show: 'Hello World'; cr.!
+
+Transcript cr; show: 'Hello World'; cr.!
+
+"00:22:52, domingo, 19 de enero de 2025: Image saved"!
+
+"16:49:17, viernes, 2 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+"16:51:44, viernes, 2 de mayo de 2025: Dolphin Smalltalk Professional started"!
+"15:43:35, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Libreria
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Libreria guid: (GUID fromString: '{B18566B0-19C4-47D1-B55A-A9B4C0E0DD68}')!
+Libreria comment: ''!
+!Libreria categoriesForClass!Kernel-Objects! !
+Object subclass: #Libreria
+	instanceVariableNames: 'id'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Libreria methodsFor!
+iniLibreriaId: unId
+	"Inicializa una libreria"
+
+	id := unId.! !
+!Libreria categoriesFor: #iniLibreriaId:!private! !
+
+!Libreria class methodsFor!
+crearLibreriaId: unId
+	"Retorna una instancia de libreria inicializada"
+
+	^(self new) iniLibreriaId: unId.! !
+!Libreria class categoriesFor: #crearLibreriaId:!public! !
+
+!Libreria methodsFor!
+verId
+	"Retorna el id de libreria"
+
+	^id.! !
+!Libreria categoriesFor: #verId!public! !
+
+!Libreria methodsFor!
+modiId: unId
+	"Modifica el id de libreria"
+
+	id := unId.! !
+!Libreria categoriesFor: #modiId:!public! !
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l inspect.!
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l verId!
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l modiId: 2.
+l verId.!
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l modiId: 2.
+l verId.!
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l modiId: 2.
+l verId.!
+
+"15:53:14, miércoles, 14 de mayo de 2025: Image saved"!
+
+"16:23:14, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+!Libreria methodsFor!
+verId
+	"Retorna el id de libreria"
+
+	^id.! !
+!Libreria categoriesFor: #verId!public! !
+
+"16:23:51, miércoles, 14 de mayo de 2025: Image saved"!
+
+"18:32:02, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+!Libreria methodsFor!
+hola
+	""
+
+	^id.! !
+!Libreria categoriesFor: #hola!public! !
+
+Libreria removeSelector: #hola ifAbsent: []!
+
+|l|
+l := Libreria crearLibreriaId: 1.
+l modiId: 2.
+l verId.
+l inspect.!
+
+"18:33:46, miércoles, 14 de mayo de 2025: Image saved"!
+
+"18:44:29, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
+"18:45:26, miércoles, 14 de mayo de 2025: Dolphin Smalltalk Professional started"!
+
